@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #1c1c1c;
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav .logo h1 {
+    color: #f8f8f8;
+    font-size: 2rem;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+nav .nav-links li {
+    margin-left: 20px;
+}
+
+nav .nav-links a {
+    text-decoration: none;
+    color: #f8f8f8;
+    font-size: 1rem;
+}
+
+.hero {
+    background: url('https://i.pinimg.com/736x/49/fb/27/49fb27598dd51d7ade6a49d5769f8859.jpg') no-repeat center/cover;
+    padding: 80px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    background-color: #ff5252;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    background-color: #ff4040;
+}
+
+/* New Styles for Anime Suggestion Section */
+.anime-suggestion {
+    background-color: #1c1c1c;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 30px;
+    color: #fff;
+}
+
+.anime-suggestion h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.anime-suggestion label {
+    font-size: 1.1rem;
+    margin-right: 10px;
+    color: #f8f8f8;
+}
+
+.anime-suggestion select {
+    padding: 8px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.anime-suggestion button {
+    background-color: #ff5252;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.anime-suggestion button:hover {
+    background-color: #ff4040;
+}
+
+#suggested-anime {
+    margin-top: 20px;
+}
+
+#suggested-anime p {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#suggested-anime img {
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+/* Popular Anime Section */
+.popular-anime {
+    padding: 40px 20px;
+    background-color: #1c1c1c;
+}
+
+.popular-anime h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.anime-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.anime-card {
+    text-align: center;
+    margin: 10px;
+}
+
+.anime-card img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #1c1c1c;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    color: #fff;
+}

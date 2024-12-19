@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Added styles for the hero section background image */
+        .hero {
+            background: url('https://i.pinimg.com/736x/49/fb/27/49fb27598dd51d7ade6a49d5769f8859.jpg') no-repeat center/cover;
+            padding: 80px 20px;
+            text-align: center;
+            color: #fff;
+        }
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .hero button {
+            background-color: #ff5252;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .hero button:hover {
+            background-color: #ff4040;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Anime Hub</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="genre.html">Genres</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Anime Hub</h2>
+            <p>Explore thousands of animes!</p>
+            <button>Start Watching</button>
+        </div>
+    </section>
+
+    <!-- Mood Based Anime Suggestion -->
+    <section class="anime-suggestion">
+        <h2>Feeling Moody? Get an Anime Suggestion!</h2>
+        <label for="mood-selector">Select Your Mood:</label>
+        <select id="mood-selector">
+            <option value="happy">Happy</option>
+            <option value="sad">Sad</option>
+            <option value="adventure">Adventure</option>
+            <option value="romantic">Romantic</option>
+            <option value="action">Action</option>
+            <option value="chill">Chill</option>
+        </select>
+        <button onclick="suggestAnime()">Get Suggestion</button>
+
+        <div id="suggested-anime" style="margin-top: 20px; text-align: center;">
+            <p id="anime-name"></p>
+            <img id="anime-image" style="max-width: 300px; display: block; margin: 0 auto;">
+        </div>
+    </section>
+
+    <!-- Popular Anime Section -->
+    <section class="popular-anime">
+        <h2>Popular Anime</h2>
+        <div class="anime-list">
+            <!-- Anime Cards -->
+            <div class="anime-card">
+                <img src="https://m.media-amazon.com/images/I/71gw2iXxJZL.jpg" alt="One Piece" loading="lazy"> 
+                <p>One Piece</p>
+            </div>
+            <div class="anime-card">
+                <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/09/naruto.jpg" alt="Naruto" loading="lazy">
+                <p>Naruto</p>
+            </div>
+            <div class="anime-card">
+                <img src="https://m.media-amazon.com/images/M/MV5BNzEzYjhkYTctMWNmZS00MTc5LWI4OWUtZjFkNzNkYTNkMTJlXkEyXkFqcGc@.jpg" alt="Demon Slayer" loading="lazy">
+                <p>Demon Slayer</p>
+            </div>
+            <div class="anime-card">
+                <img src="https://i.pinimg.com/originals/00/06/1f/00061f908e7f2283162f37bee3a92720.jpg" alt="Attack on Titan" loading="lazy">
+                <p>Attack on Titan</p>
+            </div>
+            <div class="anime-card">
+                <img src="https://imgs.search.brave.com/4umDq1azukn55AMfwQyKBHxcOaqPj-qHNlJpRX1WQ1k/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9leHRl/cm5hbC1wcmV2aWV3/LnJlZGQuaXQvb25l/LXB1bmNoLW1hbi1z/ZWFzb24tMy1wcmVt/aWVyZXMtaW4tMjAy/NS12MC1HNk82d3Mt/YUJXRWloZ1ctWVVD/OWRpN3RidU5sSTRH/WUd0dW45Nmp3amlR/LmpwZz93aWR0aD02/NDAmY3JvcD1zbWFy/dCZhdXRvPXdlYnAm/cz00Y2IwODc2YjQy/NjE5NDI3MWUyOGU0/OGQ5NDhmNWRiZDQ4/YWM2Nzkz" alt="One Punch Man" loading="lazy">
+                <p>One Punch Man</p>
+            </div>
+            <div class="anime-card">
+                <img src="https://imgs.search.brave.com/hU85zUKnFqJbYBcJU1HDkOYxmWn-7LVqzBMsX6M7z-E/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1Qk16TmhaVGRt/TkRZdE5UQTBOQzAw/TW1ObUxXSXpZalV0/TmpnNU56TmxZV1Ew/TjJFNVhrRXlYa0Zx/Y0djQC5qcGc" alt="Ju Jutsu Kaisen" loading="lazy">
+                <p>Ju Jutsu Kaisen</p>
+            </div>
+            <div class="anime-card">
+                <img src="https://imgs.search.brave.com/KrGg3WW7HUzt7PL95gIL-CFkquUFuHVGqPHg6QnUILk/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1Qk5tRXlaakkw/TTJNdE5HRmtPQzAw/WVRSbExXSTBNR1F0/WVRneU9EWTJNR1Jo/TWpjNFhrRXlYa0Zx/Y0djQC5qcGc" alt="Your Name" loading="lazy">
+                <p>Your Name</p>
+            </div>
+            <div class="anime-card">
+                <img src="https://imgs.search.brave.com/TSl21nxNUbpHIVCCgx9KR0pwGh6bQSnQrqm1VgDgJ9s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC9DTFdZOER1/LmpwZw" alt="Bleach" loading="lazy">
+                    <p>Bleach</p>
+            </div>
+            <div class="anime-card">
+                <img src="https://imgs.search.brave.com/sdLugG1yJHj9LM-Lo4kdkHkX8suAjbJgjRoLqOZ5fh4/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9kMjho/Z3ByaThhbTJpZi5j/bG91ZGZyb250Lm5l/dC9ib29rX2ltYWdl/cy9vbml4L2N2cjk3/ODE5NzQ3MDk5Mzkv/Y2hhaW5zYXctbWFu/LXZvbC0xLTk3ODE5/NzQ3MDk5MzlfbGcu/anBn" alt="Chainsaw Man" loading="lazy">
+                    <p>Chainsaw Man</p>
+            </div>
+            <div class="anime-card">
+                <img src="https://i.pinimg.com/originals/00/06/1f/00061f908e7f2283162f37bee3a92720.jpg" alt="Attack on Titan" loading="lazy">
+                <p>Attack on Titan</p>
+            </div>
+            <div class="anime-card">
+                <img src="https://imgs.search.brave.com/WR607eipmTvnhVyKoCnf6-kl7YDX-PmPsgMDN8OKkT0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQvZGVhdGgtbm90/ZS1odHJ1cnVpcnNw/cXEwem90LmpwZw" alt="Death Note" loading="lazy">
+                <p>Death Note</p>
+            </div>  
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Anime Hub. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function suggestAnime() {
+            const mood = document.getElementById('mood-selector').value;
+            const animeName = document.getElementById('anime-name');
+            const animeImage = document.getElementById('anime-image');
+
+            let suggestion = { name: '', image: '' };
+
+            if (mood === 'happy') {
+                suggestion.name = 'My Neighbor Totoro';
+                suggestion.image = 'https://imgs.search.brave.com/DQmr1pUlWbi_NgEyE-SiP_xppxPysiJuIjf0DkTSQXM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzcxaXdha3J6dnlM/LmpwZw';
+            } else if (mood === 'sad') {
+                suggestion.name = 'A Silent Voice';
+                suggestion.image = 'https://imgs.search.brave.com/ozNN5pqw98Coq-hY-Vaq-Qd8kPjeFuAPxVEHTMQE4X0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1Qk9URmlOelJp/T1dFdFlUUXdOeTAw/Tm1SaUxXRTBaV1l0/TlRFMFlqRXhaakZt/Wmprd1hrRXlYa0Zx/Y0djQC5qcGc';
+            } else if (mood === 'adventure') {
+                suggestion.name = 'One Piece';
+                suggestion.image = 'https://m.media-amazon.com/images/I/71gw2iXxJZL.jpg';
+            } else if (mood === 'romantic') {
+                suggestion.name = 'Your Name';
+                suggestion.image = 'https://imgs.search.brave.com/KrGg3WW7HUzt7PL95gIL-CFkquUFuHVGqPHg6QnUILk/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1Qk5tRXlaakkw/TTJNdE5HRmtPQzAw/WVRSbExXSTBNR1F0/WVRneU9EWTJNR1Jo/TWpjNFhrRXlYa0Zx/Y0djQC5qcGc';
+            } else if (mood === 'action') {
+                suggestion.name = 'Attack on Titan';
+                suggestion.image = 'https://i.pinimg.com/originals/00/06/1f/00061f908e7f2283162f37bee3a92720.jpg';
+            } else if (mood === 'chill') {
+                suggestion.name = 'Howl\'s Moving Castle';
+                suggestion.image = 'https://imgs.search.brave.com/w09M0LAbDpIEstR84CdQOLZyjN-kyPrI28AhNSzNOrU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFkQWtQa203d0wu/anBn';
+            }
+
+            animeName.textContent = `We suggest: ${suggestion.name}`;
+            animeImage.src = suggestion.image;
+        }
+    </script>
+</body>
+</html>
